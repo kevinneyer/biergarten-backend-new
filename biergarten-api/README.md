@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend API for the Biergarten Application - https://github.com/kevinneyer/biergarten-front-end
 
-Things you may want to cover:
+To use, run:
 
-* Ruby version
+  * Bundle Install
 
-* System dependencies
+  * rails s -p 3001
 
-* Configuration
+and your endpoint will be ready.
 
-* Database creation
+# AUTHOR
+  Kevin Neyer https://github.com/kevinneyer
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
