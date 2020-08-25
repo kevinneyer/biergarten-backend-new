@@ -1,4 +1,4 @@
-
+# README
 This is the backend API for the Biergarten Application - https://github.com/kevinneyer/biergarten-front-end
 
 To use, run:
