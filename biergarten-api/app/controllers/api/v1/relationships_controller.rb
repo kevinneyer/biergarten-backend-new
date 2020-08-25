@@ -16,7 +16,6 @@ class Api::V1::RelationshipsController < ApplicationController
     end
 
     def destroy
-        byebug
         relationship = Relationship.find(params[:id])
         relationship.destroy
     end

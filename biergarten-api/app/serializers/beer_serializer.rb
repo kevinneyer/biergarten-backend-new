@@ -11,8 +11,7 @@ class BeerSerializer < ActiveModel::Serializer
       rating: review.rating,
       user_image: review.user.image,
       user_id: review.user.id,
-      user_reviews: review.user.reviews
-    }
+      user_reviews: review.user.reviews}
     end 
   end 
 
