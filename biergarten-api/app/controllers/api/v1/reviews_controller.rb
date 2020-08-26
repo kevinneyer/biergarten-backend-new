@@ -12,7 +12,6 @@ class Api::V1::ReviewsController < ApplicationController
 
       def create
           review = Review.create({content: params[:content], beer_id: params[:beer][:beer_id], rating: params[:rating], user: session_user})
-          # review = Review.create(review_params)
           render json: review        
       end
       

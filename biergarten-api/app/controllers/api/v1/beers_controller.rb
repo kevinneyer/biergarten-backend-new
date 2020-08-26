@@ -13,7 +13,7 @@ class Api::V1::BeersController < ApplicationController
     def update
       beer = Beer.find(params[:id])
       beer.update(beer_params)
-      render json: beer #, include: [:favorites, :reviews]
+      render json: beer 
     end
     
     private

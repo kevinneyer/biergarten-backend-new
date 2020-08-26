@@ -13,7 +13,7 @@ class UserSerializer < ActiveModel::Serializer
       beer: review.beer.name,
       beer_img: review.beer.img_url,
       beer_id: review.beer.id,
-    rating: review.rating}
+      rating: review.rating}
     end 
   end 
 

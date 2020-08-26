@@ -5,7 +5,7 @@ class Api::V1::AuthController < ApplicationController
 
         if user && user.authenticate(params[:password])
           token = encode_token(user.id)
-          render json: {user: user, token: token} #, include: [:favorites, :reviews]
+          render json: {user: user, token: token}
         else
           render json: {errors: "Something went wrong!"}
         end
@@ -14,7 +14,7 @@ class Api::V1::AuthController < ApplicationController
     def auto_login
        
       if session_user 
-        render json: session_user #, include[:reviews, :favorites]
+        render json: session_user 
       else
         render json: {errors: "Something went wrong!"}
       end
