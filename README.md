@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # biergarten-backend
 =======
 # README
@@ -14,4 +13,3 @@ and your endpoint will be ready.
 
 # AUTHOR
   Kevin Neyer https://github.com/kevinneyer
->>>>>>> 4beab441b0108e854b453ffb3a36c9c7008267f3
