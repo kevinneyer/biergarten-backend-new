@@ -1,0 +1,1464 @@
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /Users/kevinneyer/Flatiron/code/Mod_5/biergarten-api/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /Users/kevinneyer/Flatiron/code/Mod_5/biergarten-api/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2025-10-01 13:49:33 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+Caused by: PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+
+Information for: ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:69:in `rescue in new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:57:in `new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in `reconnect'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:773:in `block in verify!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `verify!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:781:in `connect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:987:in `block in with_raw_connection'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:986:in `with_raw_connection'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `with_connection'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.3) lib/active_record/migration.rb:1430:in `initialize'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `new'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `open'
+activerecord (8.0.3) lib/active_record/migration.rb:762:in `block (2 levels) in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.3) lib/active_record/migration.rb:761:in `block in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `each'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:739:in `check_pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:659:in `block (2 levels) in call'
+activesupport (8.0.3) lib/active_support/evented_file_update_checker.rb:61:in `execute'
+activerecord (8.0.3) lib/active_record/migration.rb:664:in `block in call'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `synchronize'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (8.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:944:in `connect_start'
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:944:in `connect_to_hosts'
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:871:in `new'
+pg-1.6.2-x86_64 (darwin) lib/pg.rb:88:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in `new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in `reconnect'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:773:in `block in verify!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `verify!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:781:in `connect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:987:in `block in with_raw_connection'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:986:in `with_raw_connection'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `with_connection'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.3) lib/active_record/migration.rb:1430:in `initialize'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `new'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `open'
+activerecord (8.0.3) lib/active_record/migration.rb:762:in `block (2 levels) in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.3) lib/active_record/migration.rb:761:in `block in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `each'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:739:in `check_pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:659:in `block (2 levels) in call'
+activesupport (8.0.3) lib/active_support/evented_file_update_checker.rb:61:in `execute'
+activerecord (8.0.3) lib/active_record/migration.rb:664:in `block in call'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `synchronize'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (8.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-10-01 13:49:34 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+Caused by: PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+
+Information for: ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:69:in `rescue in new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:57:in `new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in `reconnect'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:773:in `block in verify!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `verify!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:781:in `connect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:987:in `block in with_raw_connection'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:986:in `with_raw_connection'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `with_connection'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.3) lib/active_record/migration.rb:1430:in `initialize'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `new'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `open'
+activerecord (8.0.3) lib/active_record/migration.rb:762:in `block (2 levels) in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.3) lib/active_record/migration.rb:761:in `block in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `each'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:739:in `check_pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:659:in `block (2 levels) in call'
+activesupport (8.0.3) lib/active_support/evented_file_update_checker.rb:61:in `execute'
+activerecord (8.0.3) lib/active_record/migration.rb:664:in `block in call'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `synchronize'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (8.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:944:in `connect_start'
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:944:in `connect_to_hosts'
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:871:in `new'
+pg-1.6.2-x86_64 (darwin) lib/pg.rb:88:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in `new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in `reconnect'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:773:in `block in verify!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `verify!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:781:in `connect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:987:in `block in with_raw_connection'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:986:in `with_raw_connection'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `with_connection'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.3) lib/active_record/migration.rb:1430:in `initialize'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `new'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `open'
+activerecord (8.0.3) lib/active_record/migration.rb:762:in `block (2 levels) in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.3) lib/active_record/migration.rb:761:in `block in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `each'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:739:in `check_pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:659:in `block (2 levels) in call'
+activesupport (8.0.3) lib/active_support/evented_file_update_checker.rb:61:in `execute'
+activerecord (8.0.3) lib/active_record/migration.rb:664:in `block in call'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `synchronize'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (8.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /Users/kevinneyer/Flatiron/code/Mod_5/biergarten-api/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /Users/kevinneyer/Flatiron/code/Mod_5/biergarten-api/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2025-10-01 13:51:50 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+Caused by: PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+
+Information for: ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:69:in `rescue in new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:57:in `new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in `reconnect'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:773:in `block in verify!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `verify!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:781:in `connect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:987:in `block in with_raw_connection'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:986:in `with_raw_connection'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `with_connection'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.3) lib/active_record/migration.rb:1430:in `initialize'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `new'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `open'
+activerecord (8.0.3) lib/active_record/migration.rb:762:in `block (2 levels) in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.3) lib/active_record/migration.rb:761:in `block in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `each'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:739:in `check_pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:659:in `block (2 levels) in call'
+activesupport (8.0.3) lib/active_support/evented_file_update_checker.rb:61:in `execute'
+activerecord (8.0.3) lib/active_record/migration.rb:664:in `block in call'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `synchronize'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (8.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:944:in `connect_start'
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:944:in `connect_to_hosts'
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:871:in `new'
+pg-1.6.2-x86_64 (darwin) lib/pg.rb:88:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in `new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in `reconnect'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:773:in `block in verify!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `verify!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:781:in `connect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:987:in `block in with_raw_connection'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:986:in `with_raw_connection'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `with_connection'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.3) lib/active_record/migration.rb:1430:in `initialize'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `new'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `open'
+activerecord (8.0.3) lib/active_record/migration.rb:762:in `block (2 levels) in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.3) lib/active_record/migration.rb:761:in `block in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `each'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:739:in `check_pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:659:in `block (2 levels) in call'
+activesupport (8.0.3) lib/active_support/evented_file_update_checker.rb:61:in `execute'
+activerecord (8.0.3) lib/active_record/migration.rb:664:in `block in call'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `synchronize'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (8.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2025-10-01 13:51:53 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+Caused by: PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+
+Information for: ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:69:in `rescue in new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:57:in `new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in `reconnect'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:773:in `block in verify!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `verify!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:781:in `connect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:987:in `block in with_raw_connection'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:986:in `with_raw_connection'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `with_connection'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.3) lib/active_record/migration.rb:1430:in `initialize'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `new'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `open'
+activerecord (8.0.3) lib/active_record/migration.rb:762:in `block (2 levels) in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.3) lib/active_record/migration.rb:761:in `block in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `each'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:739:in `check_pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:659:in `block (2 levels) in call'
+activesupport (8.0.3) lib/active_support/evented_file_update_checker.rb:61:in `execute'
+activerecord (8.0.3) lib/active_record/migration.rb:664:in `block in call'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `synchronize'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (8.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:944:in `connect_start'
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:944:in `connect_to_hosts'
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:871:in `new'
+pg-1.6.2-x86_64 (darwin) lib/pg.rb:88:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in `new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in `reconnect'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:773:in `block in verify!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `verify!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:781:in `connect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:987:in `block in with_raw_connection'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:986:in `with_raw_connection'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `with_connection'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.3) lib/active_record/migration.rb:1430:in `initialize'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `new'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `open'
+activerecord (8.0.3) lib/active_record/migration.rb:762:in `block (2 levels) in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.3) lib/active_record/migration.rb:761:in `block in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `each'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:739:in `check_pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:659:in `block (2 levels) in call'
+activesupport (8.0.3) lib/active_support/evented_file_update_checker.rb:61:in `execute'
+activerecord (8.0.3) lib/active_record/migration.rb:664:in `block in call'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `synchronize'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (8.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-10-01 13:51:53 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+Caused by: PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+
+Information for: ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:69:in `rescue in new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:57:in `new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in `reconnect'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:773:in `block in verify!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `verify!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:781:in `connect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:987:in `block in with_raw_connection'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:986:in `with_raw_connection'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `with_connection'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.3) lib/active_record/migration.rb:1430:in `initialize'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `new'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `open'
+activerecord (8.0.3) lib/active_record/migration.rb:762:in `block (2 levels) in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.3) lib/active_record/migration.rb:761:in `block in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `each'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:739:in `check_pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:659:in `block (2 levels) in call'
+activesupport (8.0.3) lib/active_support/evented_file_update_checker.rb:61:in `execute'
+activerecord (8.0.3) lib/active_record/migration.rb:664:in `block in call'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `synchronize'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (8.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:944:in `connect_start'
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:944:in `connect_to_hosts'
+pg-1.6.2-x86_64 (darwin) lib/pg/connection.rb:871:in `new'
+pg-1.6.2-x86_64 (darwin) lib/pg.rb:88:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in `new_client'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in `connect'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in `reconnect'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:773:in `block in verify!'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `verify!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:781:in `connect!'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:987:in `block in with_raw_connection'
+activesupport (8.0.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract_adapter.rb:986:in `with_raw_connection'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `with_connection'
+activerecord (8.0.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.3) lib/active_record/migration.rb:1430:in `initialize'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `new'
+activerecord (8.0.3) lib/active_record/migration.rb:1278:in `open'
+activerecord (8.0.3) lib/active_record/migration.rb:762:in `block (2 levels) in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.3) lib/active_record/migration.rb:761:in `block in pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `each'
+activerecord (8.0.3) lib/active_record/migration.rb:760:in `pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:739:in `check_pending_migrations'
+activerecord (8.0.3) lib/active_record/migration.rb:659:in `block (2 levels) in call'
+activesupport (8.0.3) lib/active_support/evented_file_update_checker.rb:61:in `execute'
+activerecord (8.0.3) lib/active_record/migration.rb:664:in `block in call'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `synchronize'
+activerecord (8.0.3) lib/active_record/migration.rb:656:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.3) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+activesupport (8.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.3) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2025-10-01 13:52:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kevinneyer/.rvm/gems/ruby-3.2.0/gems/railties-8.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kevinneyer/.rvm/gems/ruby-3.2.0/gems/railties-8.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/icon.png" for 127.0.0.1 at 2025-10-01 13:52:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/icon.png"):
+  
+Started GET "/beers" for 127.0.0.1 at 2025-10-01 13:52:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/beers"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-10-01 13:52:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1beers" for 127.0.0.1 at 2025-10-01 13:53:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1beers"):
+  
+Started GET "/api/v1/beers" for 127.0.0.1 at 2025-10-01 13:54:00 -0400
+Processing by Api::V1::BeersController#index as HTML
+  [1m[36mBeer Load (66.4ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:10:in `block in reviews'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:10:in `block in reviews'
+[active_model_serializers]   [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 5], ["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers] No serializer found for resource: {:review_id=>1, :content=>"Really loved it!", :user=>"buschman", :rating=>4.0, :user_image=>"https://images.clipartlogo.com/files/istock/previews/8979/89799061-business-man-profile-icon-african-american-ethnic-male-avatar.jpg", :user_id=>5, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 1, content: "Really loved it!", user_id: 5, beer_id: 1, created_at: "2021-04-20 14:09:08.669783000 +0000", updated_at: "2021-04-20 14:09:08.669783000 +0000", rating: 4.0>, #<Review id: 4, content: "Amazing IPA", user_id: 5, beer_id: 15, created_at: "2021-04-20 14:09:08.686273000 +0000", updated_at: "2021-04-20 14:09:08.686273000 +0000", rating: 5.0>]>}
+[active_model_serializers]   [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mFavorite Load (1.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:21:in `block in favorites'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:21:in `block in favorites'
+[active_model_serializers] No serializer found for resource: {:favorite_id=>1, :user=>"bobama"}
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 2]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 2]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 3]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 3]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 4]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 4]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 5]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 5]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 6]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 6]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 7]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 7]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 8]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 8]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 9]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 9]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 10]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 10]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 11]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 11]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 12]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 12]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 13]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:10:in `block in reviews'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 3], ["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers] No serializer found for resource: {:review_id=>5, :content=>"Not that great. Too dark", :user=>"beer4ever", :rating=>1.0, :user_image=>"https://i.pinimg.com/originals/a7/0e/16/a70e1675c7bc001f1578aa76bb0a7819.png", :user_id=>3, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 5, content: "Not that great. Too dark", user_id: 3, beer_id: 13, created_at: "2021-04-20 14:09:08.691115000 +0000", updated_at: "2021-04-20 14:09:08.691115000 +0000", rating: 1.0>]>}
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 13]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:21:in `block in favorites'
+[active_model_serializers] No serializer found for resource: {:favorite_id=>3, :user=>"bobama"}
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 14]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 14]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 15]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:10:in `block in reviews'
+[active_model_serializers]   [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 5], ["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers] No serializer found for resource: {:review_id=>4, :content=>"Amazing IPA", :user=>"buschman", :rating=>5.0, :user_image=>"https://images.clipartlogo.com/files/istock/previews/8979/89799061-business-man-profile-icon-african-american-ethnic-male-avatar.jpg", :user_id=>5, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 1, content: "Really loved it!", user_id: 5, beer_id: 1, created_at: "2021-04-20 14:09:08.669783000 +0000", updated_at: "2021-04-20 14:09:08.669783000 +0000", rating: 4.0>, #<Review id: 4, content: "Amazing IPA", user_id: 5, beer_id: 15, created_at: "2021-04-20 14:09:08.686273000 +0000", updated_at: "2021-04-20 14:09:08.686273000 +0000", rating: 5.0>]>}
+[active_model_serializers]   [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 15]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 16]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 16]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 17]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 17]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 18]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 18]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 19]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 19]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 20]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 20]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 21]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 21]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:21:in `block in favorites'
+[active_model_serializers] No serializer found for resource: {:favorite_id=>4, :user=>"johnman"}
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 22]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 22]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 23]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:10:in `block in reviews'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 2], ["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers] No serializer found for resource: {:review_id=>2, :content=>"Only okay.", :user=>"johnman", :rating=>2.0, :user_image=>"https://icons-for-free.com/iconfiles/png/512/boy+character+man+user+icon-1320085976934394387.png", :user_id=>2, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 2, content: "Only okay.", user_id: 2, beer_id: 23, created_at: "2021-04-20 14:09:08.676186000 +0000", updated_at: "2021-04-20 14:09:08.676186000 +0000", rating: 2.0>]>}
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 23]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 24]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 24]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 25]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 25]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 26]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 26]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 27]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 27]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 28]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 28]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 29]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 29]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 30]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 30]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 31]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 31]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 32]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 32]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers] No serializer found for resource: {:review_id=>1, :content=>"Really loved it!", :user=>"buschman", :rating=>4.0, :user_image=>"https://images.clipartlogo.com/files/istock/previews/8979/89799061-business-man-profile-icon-african-american-ethnic-male-avatar.jpg", :user_id=>5, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 1, content: "Really loved it!", user_id: 5, beer_id: 1, created_at: "2021-04-20 14:09:08.669783000 +0000", updated_at: "2021-04-20 14:09:08.669783000 +0000", rating: 4.0>, #<Review id: 4, content: "Amazing IPA", user_id: 5, beer_id: 15, created_at: "2021-04-20 14:09:08.686273000 +0000", updated_at: "2021-04-20 14:09:08.686273000 +0000", rating: 5.0>]>}
+[active_model_serializers] No serializer found for resource: {:favorite_id=>1, :user=>"bobama"}
+[active_model_serializers] No serializer found for resource: {:review_id=>5, :content=>"Not that great. Too dark", :user=>"beer4ever", :rating=>1.0, :user_image=>"https://i.pinimg.com/originals/a7/0e/16/a70e1675c7bc001f1578aa76bb0a7819.png", :user_id=>3, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 5, content: "Not that great. Too dark", user_id: 3, beer_id: 13, created_at: "2021-04-20 14:09:08.691115000 +0000", updated_at: "2021-04-20 14:09:08.691115000 +0000", rating: 1.0>]>}
+[active_model_serializers] No serializer found for resource: {:favorite_id=>3, :user=>"bobama"}
+[active_model_serializers] No serializer found for resource: {:review_id=>4, :content=>"Amazing IPA", :user=>"buschman", :rating=>5.0, :user_image=>"https://images.clipartlogo.com/files/istock/previews/8979/89799061-business-man-profile-icon-african-american-ethnic-male-avatar.jpg", :user_id=>5, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 1, content: "Really loved it!", user_id: 5, beer_id: 1, created_at: "2021-04-20 14:09:08.669783000 +0000", updated_at: "2021-04-20 14:09:08.669783000 +0000", rating: 4.0>, #<Review id: 4, content: "Amazing IPA", user_id: 5, beer_id: 15, created_at: "2021-04-20 14:09:08.686273000 +0000", updated_at: "2021-04-20 14:09:08.686273000 +0000", rating: 5.0>]>}
+[active_model_serializers] No serializer found for resource: {:favorite_id=>4, :user=>"johnman"}
+[active_model_serializers] No serializer found for resource: {:review_id=>2, :content=>"Only okay.", :user=>"johnman", :rating=>2.0, :user_image=>"https://icons-for-free.com/iconfiles/png/512/boy+character+man+user+icon-1320085976934394387.png", :user_id=>2, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 2, content: "Only okay.", user_id: 2, beer_id: 23, created_at: "2021-04-20 14:09:08.676186000 +0000", updated_at: "2021-04-20 14:09:08.676186000 +0000", rating: 2.0>]>}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (231.79ms)
+Completed 200 OK in 408ms (Views: 231.8ms | ActiveRecord: 133.2ms (83 queries, 7 cached) | GC: 21.6ms)
+
+
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /Users/kevinneyer/Flatiron/code/Mod_5/biergarten-api/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /Users/kevinneyer/Flatiron/code/Mod_5/biergarten-api/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBeer Load (0.8ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (4.8ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (2.2ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.1ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.1ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.1ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (8.3ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.1ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (2.1ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.2ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.2ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.7ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.2ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.2ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (3.3ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.4ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.3ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (26.4ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.2ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.9ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.4ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.1ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.2ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 22]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.1ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 23]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.4ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 24]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.3ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 25]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.3ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 26]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.9ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 27]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.6ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 28]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.3ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 29]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.3ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 30]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.3ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 31]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Destroy (1.2ms)[0m  [1m[31mDELETE FROM "beers" WHERE "beers"."id" = $1[0m  [["id", 32]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Load (1.1ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = $1[0m  [["follower_id", 1]]
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."followed_id" = $1[0m  [["followed_id", 1]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Load (1.6ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = $1[0m  [["follower_id", 2]]
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."followed_id" = $1[0m  [["followed_id", 2]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Load (1.2ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = $1[0m  [["follower_id", 3]]
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."followed_id" = $1[0m  [["followed_id", 3]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Load (1.3ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = $1[0m  [["follower_id", 4]]
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."followed_id" = $1[0m  [["followed_id", 4]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Load (1.2ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = $1[0m  [["follower_id", 5]]
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."followed_id" = $1[0m  [["followed_id", 5]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Load (1.3ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = $1[0m  [["follower_id", 6]]
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT "relationships".* FROM "relationships" WHERE "relationships"."followed_id" = $1[0m  [["followed_id", 6]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFavorite Load (0.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFavorite Destroy (1.7ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFavorite Destroy (1.5ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFavorite Destroy (2.0ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFavorite Destroy (1.2ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Destroy (1.6ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Destroy (1.1ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Destroy (1.2ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Destroy (1.6ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Destroy (2.7ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (7.8ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Budweiser"], ["brewery", "AB InBev"], ["img_url", "https://delpapadistributing.com/wp-content/uploads/2018/09/budweiser_pair_02.png"], ["style", "Lager"], ["abv", 5.0], ["description", "Medium bodied, flavorful, crisp lager brewed with the best barley malt and blend of premium hop varieties."], ["tasting_notes", "Crisp taste with a smooth finish. "], ["likes", 10], ["recommended_drinking", "Perfect for all year drinking, grilling, and baseball games."], ["created_at", "2025-10-01 17:54:52.406723"], ["updated_at", "2025-10-01 17:54:52.406723"], ["url", "https://www.budweiser.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.8ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Miller High Life"], ["brewery", "Miller Brewing Co"], ["img_url", "https://dydza6t6xitx6.cloudfront.net/ci-miller-high-life-1c0b560ccca972a0.jpeg"], ["style", "Lager"], ["abv", 4.6], ["description", "True to its original recipe, it’s brewed with a proprietary blend of malted barley, Galena hops from the Pacific Northwest, and Miller yeast."], ["tasting_notes", "Crisp, refreshing, and effervescent "], ["likes", 3], ["recommended_drinking", "BBQs, divebars, and summertime drinking."], ["created_at", "2025-10-01 17:54:52.418027"], ["updated_at", "2025-10-01 17:54:52.418027"], ["url", "https://www.millerhighlife.com"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.5ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Pabst Blue Ribbon"], ["brewery", "Pabst Brewing Company"], ["img_url", "https://pabstblueribbon.com/files/pbr-org_1-768x922.png"], ["style", "Lager"], ["abv", 4.8], ["description", "A smooth, full bodied beer with a clean, crisp finish with a fine noble hop aroma."], ["tasting_notes", "Grain, corn"], ["likes", 14], ["recommended_drinking", "Always good for all the time."], ["created_at", "2025-10-01 17:54:52.423182"], ["updated_at", "2025-10-01 17:54:52.423182"], ["url", "https://pabstblueribbon.com"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.6ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Fat Tire"], ["brewery", "New Belgium"], ["img_url", "https://products1.imgix.drizly.com/ci-new-belgium-fat-tire-b4e1817093500c47.jpeg?auto=format%2Ccompress&fm=jpg&q=20"], ["style", "Amber Ale"], ["abv", 5.2], ["description", "Easy drinking amber ale with a medium body and light, sweet finish."], ["tasting_notes", "Toasty malt, gentle sweetness, and a flash of fresh hop bitterness"], ["likes", 9], ["recommended_drinking", "Camping and outdoor activities"], ["created_at", "2025-10-01 17:54:52.427090"], ["updated_at", "2025-10-01 17:54:52.427090"], ["url", "https://www.newbelgium.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "VooDoo Ranger"], ["brewery", "New Belgium"], ["img_url", "https://www.newbelgium.com/globalassets/beer/voodoo-ranger/vripa_2019_globe_btl.png"], ["style", "IPA"], ["abv", 7.0], ["description", "Bursting with tropical aromas and juicy fruit flavors from Mosaic and Amarillo hops, this golden IPA is perfectly bitter with a refreshing, sublime finish."], ["tasting_notes", "Lightly sweet at first with a stronger, building and perfect bitterness."], ["likes", 11], ["recommended_drinking", "Grilling, outdoor activities"], ["created_at", "2025-10-01 17:54:52.430851"], ["updated_at", "2025-10-01 17:54:52.430851"], ["url", "https://www.newbelgium.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.7ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Two Hearted Ale"], ["brewery", "Bells Brewery"], ["img_url", "https://cdn.shopify.com/s/files/1/0227/0581/products/Bells-Two-Hearted-Ale-12OZ-CAN_620x.JPG?v=1587397438"], ["style", "IPA"], ["abv", 7.0], ["description", "Bursting with hop aromas ranging from pine to grapefruit from massive hop additions in both the kettle and the fermenter."], ["tasting_notes", "Bitter Citrus Pine"], ["likes", 7], ["recommended_drinking", "Remarkably drinkable and well suited for adventures everywhere."], ["created_at", "2025-10-01 17:54:52.434668"], ["updated_at", "2025-10-01 17:54:52.434668"], ["url", "http://www.bellsbeer.com"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Pale Ale"], ["brewery", "Sierra Nevada"], ["img_url", "https://products1.imgix.drizly.com/ci-sierra-nevada-pale-ale-972a185439d2f351.jpeg?auto=format%2Ccompress&fm=jpg&q=20"], ["style", "Ale"], ["abv", 5.6], ["description", "Heavy on hops, with intense aromas of pine and citrus."], ["tasting_notes", "Fragrant bouquet and spicy flavor"], ["likes", 20], ["recommended_drinking", "Enjoy outdoors, grilling, bbq, hiking, camping"], ["created_at", "2025-10-01 17:54:52.438778"], ["updated_at", "2025-10-01 17:54:52.438778"], ["url", "https://sierranevada.com"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Road 2 Ruin"], ["brewery", "Two Roads"], ["img_url", "https://www.totalwine.com/dynamic/490x/media/sys_master/twmmedia/h2b/h3d/11348859191326.png"], ["style", "Double IPA"], ["abv", 8.0], ["description", "Big, hoppy IPA with plenty of bite!"], ["tasting_notes", "Pine, citrus, and floral"], ["likes", 10], ["recommended_drinking", "Cooler weather, stronger profiles, having a good time."], ["created_at", "2025-10-01 17:54:52.442485"], ["updated_at", "2025-10-01 17:54:52.442485"], ["url", "https://tworoadsbrewing.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.7ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "City Wide"], ["brewery", "4 Hands Brewing Co"], ["img_url", "https://s3.amazonaws.com/liftclient-offloading/4hands/wp-content/uploads/2019/04/CityWide.png"], ["style", "Pale Ale"], ["abv", 5.5], ["description", "An American pale ale that showcases a blend of Centennial, Citra and Simcoe hops"], ["tasting_notes", "Aromas of citrus, melon and tropical fruit tapering to a crisp, juicy finish"], ["likes", 14], ["recommended_drinking", "Summer, grilling, Imos"], ["created_at", "2025-10-01 17:54:52.445960"], ["updated_at", "2025-10-01 17:54:52.445960"], ["url", "https://4handsbrewery.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Toasted Lager"], ["brewery", "Blue Point Brewing Company "], ["img_url", "https://www.bluepointbrewing.com/assets/images/beers/year-round/toasted-lager/toasted-lager-can.png"], ["style", "Lager"], ["abv", 5.5], ["description", "Named for the “toasted” characteristics of the original direct-fire brick kettle, this flagship brew is brewed with a blend of six specialty malts for a rich flavor."], ["tasting_notes", "Balanced malt and hops with a smooth finish."], ["likes", 11], ["recommended_drinking", "fall, pizza, on a boat."], ["created_at", "2025-10-01 17:54:52.450435"], ["updated_at", "2025-10-01 17:54:52.450435"], ["url", "https://www.bluepointbrewing.com/home"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "IPA"], ["brewery", "Lagunitas Brewing Company"], ["img_url", "https://dydza6t6xitx6.cloudfront.net/ci-lagunitas-ipa-ea3c01b7b5a23bd8.png"], ["style", "IPA"], ["abv", 6.2], ["description", "A well-rounded, highly drinkable IPA"], ["tasting_notes", "A bit of Caramel Malt barley provides the richness that mellows out the twang of the hops."], ["likes", 19], ["recommended_drinking", "mussels, summer, beach"], ["created_at", "2025-10-01 17:54:52.454750"], ["updated_at", "2025-10-01 17:54:52.454750"], ["url", "https://lagunitas.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Boston Lager"], ["brewery", "Sam Adams"], ["img_url", "https://i0.wp.com/www.delmesaliquor.com/wp-content/uploads/2020/05/Sam-Adams-Lager.jpeg?fit=696%2C743&ssl=1"], ["style", "Lager"], ["abv", 5.0], ["description", "Helped lead the American beer revolution, reviving a passion for full-flavored brews."], ["tasting_notes", "A distinctive balance of spicy hops, slightly sweet roasted malts, and a smooth finish."], ["likes", 15], ["recommended_drinking", "marathons, all year"], ["created_at", "2025-10-01 17:54:52.459664"], ["updated_at", "2025-10-01 17:54:52.459664"], ["url", "https://www.samueladams.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.6ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Guinness"], ["brewery", "Guinness and Co"], ["img_url", "https://assets.bizjournals.com/boston/news/0317-Guinness-courtesy-Diageo.jpg?v=3"], ["style", "Stout"], ["abv", 4.2], ["description", "Rich and creamy. Distinctively black. This iconic beer is unmistakeable."], ["tasting_notes", "Bitter sweet with notes of malt and roast. Rich, creamy, and velvety smooth."], ["likes", 10], ["recommended_drinking", "St.Patricks Day, in Ireland, winter"], ["created_at", "2025-10-01 17:54:52.463232"], ["updated_at", "2025-10-01 17:54:52.463232"], ["url", "https://www.guinness.com/en-us"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Prima Pils"], ["brewery", "Victory Brewing Co"], ["img_url", "https://dydza6t6xitx6.cloudfront.net/ci-victory-prima-pils-53e84a166ec6bb50.png"], ["style", "Pilsner"], ["abv", 5.3], ["description", "This is truly brilliant beer, bringing nuanced complexity together with smooth, easy drinking."], ["tasting_notes", "A crisp yet distinct Pilsner brewed with German hops that bring vivid notes of floral and spice with citrus and lemon."], ["likes", 4], ["recommended_drinking", "year round, beach, grilling, easy drinking"], ["created_at", "2025-10-01 17:54:52.467155"], ["updated_at", "2025-10-01 17:54:52.467155"], ["url", "https://victorybeer.com"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.4ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Resin"], ["brewery", "Sixpoint Brewery"], ["img_url", "https://sixpoint.com/wp-content/uploads/2012/02/resin_can.jpg"], ["style", "Double IPA"], ["abv", 9.1], ["description", "Key Ingredients, Chinook and Centennial Hops, are a little old school, with tons of resin and pine notes. Resin uses a ton of different hops, for a massively complex hop bouquet."], ["tasting_notes", "Hop candy up front, but drinks super clean for the size of the beer."], ["likes", 17], ["recommended_drinking", "looking for something strong, bold taste, cooler weather."], ["created_at", "2025-10-01 17:54:52.471158"], ["updated_at", "2025-10-01 17:54:52.471158"], ["url", "https://sixpoint.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Jammer"], ["brewery", "Sixpoint Brewery"], ["img_url", "https://sixpoint.com/wp-content/uploads/2019/04/sixpoint-site-jammer.png"], ["style", "Gose"], ["abv", 4.0], ["description", "Tart enough to tingle the tastebuds, but not so sour that you can’t throw back a few."], ["tasting_notes", "A refreshing, tart brew balanced with a fruity coriander aroma and a touch of sea salt."], ["likes", 9], ["recommended_drinking", "summer, beach, day drinking, slamming"], ["created_at", "2025-10-01 17:54:52.475085"], ["updated_at", "2025-10-01 17:54:52.475085"], ["url", "https://sixpoint.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Watermelon Session Ale"], ["brewery", "Montauk Brewing Company"], ["img_url", "https://products1.imgix.drizly.com/ci-montauk-watermelon-session-ale-10693946b59344d5.png?auto=format%2Ccompress&fm=jpg&q=20"], ["style", "Ale"], ["abv", 4.9], ["description", "This highly refreshing brew combines delicious watermelon flavors with a crisp Session Ale that is perfect for sipping under the summer sun."], ["tasting_notes", "Watermelon"], ["likes", 11], ["recommended_drinking", "seasonal, summer, beach, sun"], ["created_at", "2025-10-01 17:54:52.478789"], ["updated_at", "2025-10-01 17:54:52.478789"], ["url", "https://montaukbrewingco.com/pages/home"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Gose"], ["brewery", "Westbrook Brewing Co"], ["img_url", "https://dydza6t6xitx6.cloudfront.net/ci-westbrook-gose-c19431796be957eb.jpeg"], ["style", "Gose"], ["abv", 4.0], ["description", "Tart wheat beer with a touch of sea salt."], ["tasting_notes", "Coriander, sea salt, sour - delicious."], ["likes", 22], ["recommended_drinking", "summer, beach, slamming"], ["created_at", "2025-10-01 17:54:52.482579"], ["updated_at", "2025-10-01 17:54:52.482579"], ["url", "https://westbrookbrewing.com"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.5ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "All Galaxy Everything"], ["brewery", "Other Half Brewing"], ["img_url", "https://craftpeak-cooler-images.imgix.net/other-half-brewing/All-Galaxy-Everything.png?auto=compress%2Cformat&fit=scale&h=1024&ixlib=php-1.2.1&w=1024&wpsize=large"], ["style", "Imperial IPA"], ["abv", 8.5], ["description", "Single hop style IPA."], ["tasting_notes", "Pungent passion fruit forward Galaxy hops."], ["likes", 8], ["recommended_drinking", "slow sipping, higher ABV"], ["created_at", "2025-10-01 17:54:52.486238"], ["updated_at", "2025-10-01 17:54:52.486238"], ["url", "https://otherhalfbrewing.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Sippin Pretty"], ["brewery", "Odell Brewing Co"], ["img_url", "https://www.odellbrewing.com/wp-content/uploads/2020/05/Sippin-Pretty-Hero.png"], ["style", "Fruited Sour"], ["abv", 4.5], ["description", "Loaded with a unique blend of açai, guava, and elderberry, and balanced with a delicate addition of Himalayan pink sea salt, this beer pops with a bright ruby color and a refreshing tart finish."], ["tasting_notes", "Acai, guava, and elderberry."], ["likes", 4], ["recommended_drinking", "seasonal, summer, beach, slamming"], ["created_at", "2025-10-01 17:54:52.490081"], ["updated_at", "2025-10-01 17:54:52.490081"], ["url", "https://www.odellbrewing.com"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Coors Banquet"], ["brewery", "Coors Brewing Company"], ["img_url", "https://products2.imgix.drizly.com/ci-coors-banquet-2377c317e74b4b3c.jpeg?auto=format%2Ccompress&fm=jpg&q=20"], ["style", "Lager"], ["abv", 5.0], ["description", "Coors Banquet is brewed with 100% Rocky Mountain water and Moravian barley from many generations of family farmers"], ["tasting_notes", "The subtle blend of Chinook, Hallertau, Herkules and Taurus hops gives Coors Banquet just the perfect hint of bitterness to offset the malty sweetness"], ["likes", 15], ["recommended_drinking", "all year, slamming, outdoors"], ["created_at", "2025-10-01 17:54:52.493671"], ["updated_at", "2025-10-01 17:54:52.493671"], ["url", "https://www.coors.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.6ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "312"], ["brewery", "Goose Island"], ["img_url", "https://products2.imgix.drizly.com/ci-goose-island-312-urban-wheat-ale-14beb4546d433a46.jpeg?auto=format%2Ccompress&fm=jpg&q=20"], ["style", "Wheat Ale"], ["abv", 4.2], ["description", "A crisp, fruity ale flavor delivered in a smooth, creamy body that is immensely refreshing."], ["tasting_notes", "Lemon, spicy aroma"], ["likes", 10], ["recommended_drinking", "all year, beach, get-togethers"], ["created_at", "2025-10-01 17:54:52.497411"], ["updated_at", "2025-10-01 17:54:52.497411"], ["url", "https://www.gooseisland.com"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Numero Uno"], ["brewery", "Flying Dog Brewery"], ["img_url", "https://lh3.googleusercontent.com/yKjw7-elFFA-E22U4m4-iWBxNSF0zfmu0eeJ3VGc4K2m2c3rfRZA55Xtn2xG3r6UsVJ_Hvu2JUknPEYtk7SHcePaRGaRAQ=s750"], ["style", "Mexican Lager"], ["abv", 4.9], ["description", "Refreshing lager that brings bold, bright lime zest flavor and a crisp, clean finish"], ["tasting_notes", "lime and agave"], ["likes", 9], ["recommended_drinking", "beach, summer, hot weather, Cinco de Mayo"], ["created_at", "2025-10-01 17:54:52.501608"], ["updated_at", "2025-10-01 17:54:52.501608"], ["url", "https://www.flyingdog.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (2.0ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "SeaQuench Ale"], ["brewery", "Dogfish Head Craft Brewery "], ["img_url", "https://cdn.shopify.com/s/files/1/0227/0581/products/Dogfish-Head-SeaQuench-Sour-Ale-12OZ-CAN_417f509f-9ac7-4ec7-b0b8-c9f26be40cb5_620x.png?v=1531727454"], ["style", "Sour"], ["abv", 4.9], ["description", "Amazingly tart, refreshingly crsip."], ["tasting_notes", "Flavors of lime and the deeper slight bitter of black lime, a touch of salt on the tongue, and a bit of malt sweetness in the finish."], ["likes", 13], ["recommended_drinking", "summer, beach, slammning, get-togethers"], ["created_at", "2025-10-01 17:54:52.506756"], ["updated_at", "2025-10-01 17:54:52.506756"], ["url", "https://www.dogfish.com/front"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.6ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "White"], ["brewery", "Allagash"], ["img_url", "https://www.allagash.com/wp-content/uploads/White-2.19.20.png"], ["style", "Belgian Style Wheat"], ["abv", 5.2], ["description", "Allagash White features a refreshing balance of citrus and spice in this hazy Belgian-style wheat beer."], ["tasting_notes", "Coriander and Curaçao orange peel."], ["likes", 21], ["recommended_drinking", "easy drinking, summer, beach, Maine."], ["created_at", "2025-10-01 17:54:52.513090"], ["updated_at", "2025-10-01 17:54:52.513090"], ["url", "https://www.allagash.com/"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (2.0ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "All Day IPA"], ["brewery", "Founders"], ["img_url", "https://dydza6t6xitx6.cloudfront.net/ci-founders-all-day-ipa-f3e4b9d140c8abe0.png"], ["style", "IPA"], ["abv", 4.7], ["description", "Naturally brewed with a complex array of malts, grains and hops. Balanced for optimal aromatics and a clean finish."], ["tasting_notes", "hop, orange, tangerine, pine."], ["likes", 20], ["recommended_drinking", "all day, all year, get-togethers"], ["created_at", "2025-10-01 17:54:52.517818"], ["updated_at", "2025-10-01 17:54:52.517818"], ["url", "https://foundersbrewing.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.5ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Save the Robots"], ["brewery", "Radiant Pig"], ["img_url", "https://dydza6t6xitx6.cloudfront.net/ci-radiant-pig-save-the-robots-east-coast-ipa-e3fff96edbd8f4c1.png"], ["style", "IPA"], ["abv", 7.0], ["description", "Big IPA that drinks easy"], ["tasting_notes", "This hazy, unfiltered gem has juicy, tropical, flavors that span the hop multiverse."], ["likes", 10], ["recommended_drinking", "slamming IPAs, all year, bold flavor."], ["created_at", "2025-10-01 17:54:52.523451"], ["updated_at", "2025-10-01 17:54:52.523451"], ["url", "https://www.radiantpigbeers.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Sour Patch Suds"], ["brewery", "Mikkeller Brewing"], ["img_url", "https://dydza6t6xitx6.cloudfront.net/ci-mikkeller-nyc-sour-pitch-suds-b25d978cc6c3f3d7.jpeg"], ["style", "Sour IPA"], ["abv", 7.0], ["description", "Punch-style Sour IPA"], ["tasting_notes", "Cherry, pomegranate, key lime, pineapple, tangerine, passion fruit, lemon zest."], ["likes", 18], ["recommended_drinking", "feeling funky, summer, something new, interesting"], ["created_at", "2025-10-01 17:54:52.528306"], ["updated_at", "2025-10-01 17:54:52.528306"], ["url", "https://mikkeller.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (2.1ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Spotted Cow"], ["brewery", "New Glarus Brewing Co"], ["img_url", "https://i5.walmartimages.com/asr/047577b3-3384-4250-9218-e6b985448a0b_1.965650c07f41f76ad565b8a47492d9e7.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff"], ["style", "Naturally Cloudy Farmhouse Ale"], ["abv", 4.8], ["description", "Naturally cloudy, the yeast is allowed to remain in the bottle to enhance fullness of flavors."], ["tasting_notes", "Fun, Fruity and Satisfying"], ["likes", 20], ["recommended_drinking", "feeling funky, Wisconsin, all year"], ["created_at", "2025-10-01 17:54:52.532098"], ["updated_at", "2025-10-01 17:54:52.532098"], ["url", "https://newglarusbrewing.com"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Unfiltered Wheat"], ["brewery", "Boulevard Brewing Co"], ["img_url", "https://images.ctfassets.net/qe08557i7rmu/5d5OntyFfayQOKmOkkCucm/fd6317ba405ec7dcfa08333f5e1e4180/Boulevard-Unfiltered-Wheat-web.jpg?w=900"], ["style", "Unfiltered Wheat"], ["abv", 4.4], ["description", "Boulevard Unfiltered Wheat Beer is a lively, refreshing ale with a natural citrusy flavor and distinctive cloudy appearance."], ["tasting_notes", "Wheat and Lemon"], ["likes", 30], ["recommended_drinking", "all year, refreshing, summer, bbq"], ["created_at", "2025-10-01 17:54:52.536449"], ["updated_at", "2025-10-01 17:54:52.536449"], ["url", "https://www.boulevard.com/"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.2ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Labatt Blue"], ["brewery", "Labatt"], ["img_url", "https://dydza6t6xitx6.cloudfront.net/ci-labatt-blue-166b3625536163c9.png"], ["style", "Canadian Pilsner"], ["abv", 5.0], ["description", "Labatt Blue has a clean refreshing taste with distinct hop aroma."], ["tasting_notes", "Delicate fruit flavor and a slightly sweet aftertaste."], ["likes", 24], ["recommended_drinking", "slamming, all year, Canada, drinkable."], ["created_at", "2025-10-01 17:54:52.540322"], ["updated_at", "2025-10-01 17:54:52.540322"], ["url", "https://www.labattusa.com"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Create (1.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "brewery", "img_url", "style", "abv", "description", "tasting_notes", "likes", "recommended_drinking", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Heady Topper"], ["brewery", "Alchemist Beer"], ["img_url", "https://www.mensjournal.com/wp-content/uploads/mj-618_348_hunting-for-heady-topper-america-s-most-coveted-beer.jpg?quality=86&strip=all"], ["style", "Double IPA"], ["abv", 8.0], ["description", "The mythical and legendary. Unfiltered complex web of genious you should drink straight from the can."], ["tasting_notes", "Citrus"], ["likes", 30], ["recommended_drinking", "Special ocassions, in Vermont, feeling brave."], ["created_at", "2025-10-01 17:54:52.543882"], ["updated_at", "2025-10-01 17:54:52.543882"], ["url", "https://alchemistbeer.com/"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "beerlover"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "beerlover"], ["email", "beer@beer.com"], ["password_digest", "[FILTERED]"], ["created_at", "2025-10-01 17:54:52.754404"], ["updated_at", "2025-10-01 17:54:52.754404"], ["image", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRTz5daD1dfCq_VctX5Rwck4UTVSTb6LyY_uKKvGkU6bMW52MrsIqjAljK-mfWQIcolAhyg8JmP6G-EU2lA1BgE1g&usqp=CAU&ec=45690270"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "johnman"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "johnman"], ["email", "hello@hello.com"], ["password_digest", "[FILTERED]"], ["created_at", "2025-10-01 17:54:52.963677"], ["updated_at", "2025-10-01 17:54:52.963677"], ["image", "https://icons-for-free.com/iconfiles/png/512/boy+character+man+user+icon-1320085976934394387.png"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "beer4ever"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "beer4ever"], ["email", "beer4ever@beer.com"], ["password_digest", "[FILTERED]"], ["created_at", "2025-10-01 17:54:53.171660"], ["updated_at", "2025-10-01 17:54:53.171660"], ["image", "https://i.pinimg.com/originals/a7/0e/16/a70e1675c7bc001f1578aa76bb0a7819.png"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bobama"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "bobama"], ["email", "obama@pres.com"], ["password_digest", "[FILTERED]"], ["created_at", "2025-10-01 17:54:53.379495"], ["updated_at", "2025-10-01 17:54:53.379495"], ["image", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1Hw9rFaaOwYT-Xh5aYslbuG-GUKzeHvCxHVklq1q51TgMwEDWz1P1Byzv_g4B9pGTooA--r8oVEWzZmaA2bOPZA&usqp=CAU&ec=45690270"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "buschman"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "buschman"], ["email", "buschman@busch.com"], ["password_digest", "[FILTERED]"], ["created_at", "2025-10-01 17:54:53.612554"], ["updated_at", "2025-10-01 17:54:53.612554"], ["image", "https://images.clipartlogo.com/files/istock/previews/8979/89799061-business-man-profile-icon-african-american-ethnic-male-avatar.jpg"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mBeer Load (0.4ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mReview Create (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "user_id", "beer_id", "created_at", "updated_at", "rating") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Really loved it!"], ["user_id", 11], ["beer_id", 33], ["created_at", "2025-10-01 17:54:53.623901"], ["updated_at", "2025-10-01 17:54:53.623901"], ["rating", 4.0]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "user_id", "beer_id", "created_at", "updated_at", "rating") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Only okay."], ["user_id", 8], ["beer_id", 55], ["created_at", "2025-10-01 17:54:53.631864"], ["updated_at", "2025-10-01 17:54:53.631864"], ["rating", 2.0]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mReview Create (0.2ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "user_id", "beer_id", "created_at", "updated_at", "rating") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Great american lager"], ["user_id", 10], ["beer_id", 33], ["created_at", "2025-10-01 17:54:53.639095"], ["updated_at", "2025-10-01 17:54:53.639095"], ["rating", 5.0]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "user_id", "beer_id", "created_at", "updated_at", "rating") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Amazing IPA"], ["user_id", 11], ["beer_id", 47], ["created_at", "2025-10-01 17:54:53.648221"], ["updated_at", "2025-10-01 17:54:53.648221"], ["rating", 5.0]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "user_id", "beer_id", "created_at", "updated_at", "rating") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Not that great. Too dark"], ["user_id", 9], ["beer_id", 45], ["created_at", "2025-10-01 17:54:53.655712"], ["updated_at", "2025-10-01 17:54:53.655712"], ["rating", 1.0]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mFavorite Create (1.1ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "beer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 10], ["beer_id", 33], ["created_at", "2025-10-01 17:54:53.664772"], ["updated_at", "2025-10-01 17:54:53.664772"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mFavorite Create (0.2ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "beer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 11], ["beer_id", 33], ["created_at", "2025-10-01 17:54:53.674477"], ["updated_at", "2025-10-01 17:54:53.674477"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mFavorite Create (0.3ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "beer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 10], ["beer_id", 45], ["created_at", "2025-10-01 17:54:53.681832"], ["updated_at", "2025-10-01 17:54:53.681832"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mFavorite Create (0.2ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "beer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 8], ["beer_id", 53], ["created_at", "2025-10-01 17:54:53.688726"], ["updated_at", "2025-10-01 17:54:53.688726"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBeer Load (1.6ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /Users/kevinneyer/Flatiron/code/Mod_5/biergarten-api/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /Users/kevinneyer/Flatiron/code/Mod_5/biergarten-api/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /Users/kevinneyer/Flatiron/code/Mod_5/biergarten-api/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /Users/kevinneyer/Flatiron/code/Mod_5/biergarten-api/config/environment.rb:5)
+Started GET "/api/v1/beers" for 127.0.0.1 at 2025-10-01 13:55:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::BeersController#index as HTML
+  [1m[36mBeer Load (35.0ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+  ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 33]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:10:in `block in reviews'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:10:in `block in reviews'
+[active_model_serializers]   [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 11], ["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers] No serializer found for resource: {:review_id=>6, :content=>"Really loved it!", :user=>"buschman", :rating=>4.0, :user_image=>"https://images.clipartlogo.com/files/istock/previews/8979/89799061-business-man-profile-icon-african-american-ethnic-male-avatar.jpg", :user_id=>11, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 6, content: "Really loved it!", user_id: 11, beer_id: 33, created_at: "2025-10-01 17:54:53.623901000 +0000", updated_at: "2025-10-01 17:54:53.623901000 +0000", rating: 4.0>, #<Review id: 9, content: "Amazing IPA", user_id: 11, beer_id: 47, created_at: "2025-10-01 17:54:53.648221000 +0000", updated_at: "2025-10-01 17:54:53.648221000 +0000", rating: 5.0>]>}
+[active_model_serializers]   [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mFavorite Load (1.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 33]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:21:in `block in favorites'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:21:in `block in favorites'
+[active_model_serializers] No serializer found for resource: {:favorite_id=>5, :user=>"bobama"}
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 34]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 34]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 35]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 35]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 36]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 36]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 37]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 37]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 38]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 38]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 39]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 39]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 40]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 40]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 41]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 41]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 42]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 42]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 43]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 43]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 44]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 44]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 45]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:10:in `block in reviews'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 9], ["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers] No serializer found for resource: {:review_id=>10, :content=>"Not that great. Too dark", :user=>"beer4ever", :rating=>1.0, :user_image=>"https://i.pinimg.com/originals/a7/0e/16/a70e1675c7bc001f1578aa76bb0a7819.png", :user_id=>9, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 10, content: "Not that great. Too dark", user_id: 9, beer_id: 45, created_at: "2025-10-01 17:54:53.655712000 +0000", updated_at: "2025-10-01 17:54:53.655712000 +0000", rating: 1.0>]>}
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 45]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:21:in `block in favorites'
+[active_model_serializers] No serializer found for resource: {:favorite_id=>7, :user=>"bobama"}
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 46]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 46]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 47]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:10:in `block in reviews'
+[active_model_serializers]   [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 11], ["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers] No serializer found for resource: {:review_id=>9, :content=>"Amazing IPA", :user=>"buschman", :rating=>5.0, :user_image=>"https://images.clipartlogo.com/files/istock/previews/8979/89799061-business-man-profile-icon-african-american-ethnic-male-avatar.jpg", :user_id=>11, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 6, content: "Really loved it!", user_id: 11, beer_id: 33, created_at: "2025-10-01 17:54:53.623901000 +0000", updated_at: "2025-10-01 17:54:53.623901000 +0000", rating: 4.0>, #<Review id: 9, content: "Amazing IPA", user_id: 11, beer_id: 47, created_at: "2025-10-01 17:54:53.648221000 +0000", updated_at: "2025-10-01 17:54:53.648221000 +0000", rating: 5.0>]>}
+[active_model_serializers]   [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 47]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 48]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 48]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 49]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 49]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 50]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 50]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 51]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 51]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 52]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 52]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 53]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 53]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:21:in `block in favorites'
+[active_model_serializers] No serializer found for resource: {:favorite_id=>8, :user=>"johnman"}
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 54]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 54]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 55]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:10:in `block in reviews'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 8], ["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers] No serializer found for resource: {:review_id=>7, :content=>"Only okay.", :user=>"johnman", :rating=>2.0, :user_image=>"https://icons-for-free.com/iconfiles/png/512/boy+character+man+user+icon-1320085976934394387.png", :user_id=>8, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 7, content: "Only okay.", user_id: 8, beer_id: 55, created_at: "2025-10-01 17:54:53.631864000 +0000", updated_at: "2025-10-01 17:54:53.631864000 +0000", rating: 2.0>]>}
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/beers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 55]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 56]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 56]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 57]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 57]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 58]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 58]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 59]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 59]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 60]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 60]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 61]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 61]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 62]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 62]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 63]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 63]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."beer_id" = $1[0m  [["beer_id", 64]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:7:in `map'
+[active_model_serializers]   [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."beer_id" = $1[0m  [["beer_id", 64]]
+[active_model_serializers]   ↳ app/serializers/beer_serializer.rb:19:in `map'
+[active_model_serializers] No serializer found for resource: {:review_id=>6, :content=>"Really loved it!", :user=>"buschman", :rating=>4.0, :user_image=>"https://images.clipartlogo.com/files/istock/previews/8979/89799061-business-man-profile-icon-african-american-ethnic-male-avatar.jpg", :user_id=>11, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 6, content: "Really loved it!", user_id: 11, beer_id: 33, created_at: "2025-10-01 17:54:53.623901000 +0000", updated_at: "2025-10-01 17:54:53.623901000 +0000", rating: 4.0>, #<Review id: 9, content: "Amazing IPA", user_id: 11, beer_id: 47, created_at: "2025-10-01 17:54:53.648221000 +0000", updated_at: "2025-10-01 17:54:53.648221000 +0000", rating: 5.0>]>}
+[active_model_serializers] No serializer found for resource: {:favorite_id=>5, :user=>"bobama"}
+[active_model_serializers] No serializer found for resource: {:review_id=>10, :content=>"Not that great. Too dark", :user=>"beer4ever", :rating=>1.0, :user_image=>"https://i.pinimg.com/originals/a7/0e/16/a70e1675c7bc001f1578aa76bb0a7819.png", :user_id=>9, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 10, content: "Not that great. Too dark", user_id: 9, beer_id: 45, created_at: "2025-10-01 17:54:53.655712000 +0000", updated_at: "2025-10-01 17:54:53.655712000 +0000", rating: 1.0>]>}
+[active_model_serializers] No serializer found for resource: {:favorite_id=>7, :user=>"bobama"}
+[active_model_serializers] No serializer found for resource: {:review_id=>9, :content=>"Amazing IPA", :user=>"buschman", :rating=>5.0, :user_image=>"https://images.clipartlogo.com/files/istock/previews/8979/89799061-business-man-profile-icon-african-american-ethnic-male-avatar.jpg", :user_id=>11, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 6, content: "Really loved it!", user_id: 11, beer_id: 33, created_at: "2025-10-01 17:54:53.623901000 +0000", updated_at: "2025-10-01 17:54:53.623901000 +0000", rating: 4.0>, #<Review id: 9, content: "Amazing IPA", user_id: 11, beer_id: 47, created_at: "2025-10-01 17:54:53.648221000 +0000", updated_at: "2025-10-01 17:54:53.648221000 +0000", rating: 5.0>]>}
+[active_model_serializers] No serializer found for resource: {:favorite_id=>8, :user=>"johnman"}
+[active_model_serializers] No serializer found for resource: {:review_id=>7, :content=>"Only okay.", :user=>"johnman", :rating=>2.0, :user_image=>"https://icons-for-free.com/iconfiles/png/512/boy+character+man+user+icon-1320085976934394387.png", :user_id=>8, :user_reviews=>#<ActiveRecord::Associations::CollectionProxy [#<Review id: 7, content: "Only okay.", user_id: 8, beer_id: 55, created_at: "2025-10-01 17:54:53.631864000 +0000", updated_at: "2025-10-01 17:54:53.631864000 +0000", rating: 2.0>]>}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (219.79ms)
+Completed 200 OK in 330ms (Views: 234.7ms | ActiveRecord: 68.2ms (83 queries, 7 cached) | GC: 64.8ms)
+
+
