@@ -3,8 +3,9 @@ class Api::V1::LikesController < ApplicationController
     
   end
   def create
-      favorite = Favorite.create({beer_id: params[:beer][:beer_id], user: session_user})
-      render json: favorite
+     # update param args
+      # like = Like.create({beer_id: , user_id: session_user.id})
+      # render json: like
   end
 
   def destroy

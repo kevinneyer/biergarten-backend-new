@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2020_08_25_175749) do
+ActiveRecord::Schema[8.1].define(version: 2025_12_04_232007) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -34,6 +34,15 @@ ActiveRecord::Schema[8.1].define(version: 2020_08_25_175749) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "beer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["beer_id"], name: "index_likes_on_beer_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "relationships", force: :cascade do |t|
