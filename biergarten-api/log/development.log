@@ -1623,3 +1623,4 @@ Reverting CreateLikes (20251204040218)
   [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO "$user", public[0m
   [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public[0m
   [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO "$user", public[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
