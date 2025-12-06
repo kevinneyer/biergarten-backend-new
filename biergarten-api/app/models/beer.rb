@@ -4,6 +4,6 @@ class Beer < ApplicationRecord
   has_many :favorites
   has_many :users, through: :favorites
 
-  has_many :likes
-  has_many :users, through: :likes
+  has_many :likes, dependent: :destroy
+  has_many :liking_users, through: :likes, source: :users
 end
