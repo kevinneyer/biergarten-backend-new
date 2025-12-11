@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :beers
+
+      post "/like/:id", to: "beers#like"
     end
   end
   namespace :api do
@@ -30,10 +32,10 @@ Rails.application.routes.draw do
       resources :relationships
     end
   end
-  namespace :api do
-    namespace :v1 do
-      resources :likes
-    end
-  end
+  # namespace :api do
+  #   namespace :v1 do
+  #     resources :likes
+  #   end
+  # end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

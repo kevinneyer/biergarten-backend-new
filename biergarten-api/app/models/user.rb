@@ -9,8 +9,8 @@ class User < ApplicationRecord
   has_many :passive_relationships, class_name: "Relationship", foreign_key: :followed_id, dependent: :destroy
   has_many :followers, through: :passive_relationships, source: :follower
 
-  has_many :likes
-  has_many :beers, through: :likes
+  has_many :likes, dependent: :destroy
+  has_many :liked_beers, through: :likes, source: :beers
 
   validates :username, uniqueness: true
 
