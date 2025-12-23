@@ -6,6 +6,7 @@ class UserSerializer < ActiveModel::Serializer
   has_many :followeds
   has_many :active_relationships
   has_many :passive_relationships
+  has_many :likes
 
   def reviews
     self.object.reviews.map do |review|
