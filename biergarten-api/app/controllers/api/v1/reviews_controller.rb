@@ -12,7 +12,7 @@ class Api::V1::ReviewsController < ApplicationController
 
       def create
           review = Review.create({content: params[:content], beer_id: params[:beer][:beer_id], rating: params[:rating], user: session_user})
-          render json: review        
+          render json: review     
       end
       
       def destroy
