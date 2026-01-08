@@ -37,6 +37,15 @@ class Api::V1::BeersController < ApplicationController
       
     end
     
+    def unlike
+       if (session_user)
+        like = Like.find_by(beer_id: params[:id], user_id: session_user.id)
+        like.destroy
+       else
+        render json: { body: "ERROR"}
+       end
+    end
+
     private
 
     def beer_params
