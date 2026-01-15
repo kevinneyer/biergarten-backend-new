@@ -10,11 +10,15 @@ class UserSerializer < ActiveModel::Serializer
 
   def reviews
     self.object.reviews.map do |review|
-      {content: review.content,
-      beer: review.beer.name,
-      beer_img: review.beer.img_url,
-      beer_id: review.beer.id,
-      rating: review.rating}
+      {
+        content: review.content,
+        beer: review.beer.name,
+        beer_img: review.beer.img_url,
+        beer_id: review.beer.id,
+        rating: review.rating,
+        user_id: review.user.id,
+        review_id: review.id
+      }
     end 
   end 
 
