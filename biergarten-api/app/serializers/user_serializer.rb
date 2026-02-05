@@ -24,12 +24,13 @@ class UserSerializer < ActiveModel::Serializer
 
   def favorites
     self.object.favorites.map do |favorite|
-      {beer: favorite.beer.name,
-      beer_id: favorite.beer.id,
-      image: favorite.beer.img_url,
-      brewery: favorite.beer.brewery,
-      favorite_id: favorite.id}
+      {
+        beer: favorite.beer.name,
+        beer_id: favorite.beer.id,
+        image: favorite.beer.img_url,
+        brewery: favorite.beer.brewery,
+        favorite_id: favorite.id
+      }
     end 
-  end 
-
+  end
 end
