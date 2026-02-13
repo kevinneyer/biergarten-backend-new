@@ -1,14 +1,16 @@
 class Api::V1::BeersController < ApplicationController
   
     def index
-      @beers = Beer.all
-      
+      beers = Beer.all
       styles = Beer.distinct.pluck(:style).sort
-      beers = @beers
-      
+
+      if params[:style]
+        beers = beers.where('LOWER(style) = ?', params[:style].gsub('-', ' ').downcase) if params[:style].present? 
+      end
+
       render json: {
         beers: ActiveModelSerializers::SerializableResource.new(
-          @beers,
+          beers,
           each_serializer: BeerSerializer
         ),
         styles: styles
@@ -65,6 +67,18 @@ class Api::V1::BeersController < ApplicationController
 
     def beer_params
       params.require(:beer).permit!
+    end
+
+    def apply_filters(beers)
+      if params[:style].present?
+        # Convert hyphenated params back to noramlly spaced. Needed to match how style is formatted in DB.
+        style_query = params[:style].gsub('-', ' ').titleize
+        # use case-insensitive search to be more flexible
+        # beers = beers.where('LOWER(style) = ?', params[:style].gsub('-', ' ').downcase) if params[:style].present? 
+        beers = beers.where(style: style_query)
+      end
+     
+      beers
     end
 
 end
