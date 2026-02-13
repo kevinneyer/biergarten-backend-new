@@ -1,8 +1,18 @@
 class Api::V1::BeersController < ApplicationController
   
     def index
-      beers = Beer.all
-      render json: beers
+      @beers = Beer.all
+      
+      styles = Beer.distinct.pluck(:style).sort
+      beers = @beers
+      
+      render json: {
+        beers: ActiveModelSerializers::SerializableResource.new(
+          @beers,
+          each_serializer: BeerSerializer
+        ),
+        styles: styles
+      }
     end
 
     def show
