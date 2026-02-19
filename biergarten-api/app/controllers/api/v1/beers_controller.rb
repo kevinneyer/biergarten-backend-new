@@ -25,17 +25,17 @@ class Api::V1::BeersController < ApplicationController
 		favorite_id =  nil
 
 		if session_user
-				like_array = session_user.likes.select{ |like| like.beer_id == beer.id}
-				favorite_array = session_user.favorites.select{ |favorite| favorite.beer_id == beer.id}
+			like_array = session_user.likes.select{ |like| like.beer_id == beer.id}
+			favorite_array = session_user.favorites.select{ |favorite| favorite.beer_id == beer.id}
 
-				is_liked = like_array.length > 0
-				favorite_id = favorite_array.length > 0 ? favorite_array[0].id : nil
+			is_liked = like_array.length > 0
+			favorite_id = favorite_array.length > 0 ? favorite_array[0].id : nil
 		end
 
 		render json: {
-				beer: ActiveModelSerializers::SerializableResource.new(beer, each_serializer: BeerSerializer), 
-				is_liked: is_liked,
-				favorite_id: favorite_id
+			beer: ActiveModelSerializers::SerializableResource.new(beer, each_serializer: BeerSerializer), 
+			is_liked: is_liked,
+			favorite_id: favorite_id
 		}
 	end
 
