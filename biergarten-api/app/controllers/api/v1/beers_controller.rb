@@ -71,21 +71,23 @@ class Api::V1::BeersController < ApplicationController
 	end
 
 	def apply_sort(beers)
+		direction = params[:sort_direction]&.downcase == 'asc' ? :asc : :desc
+
 		case params[:sort_by]
 			when 'abv'
-				beers = beers.order(abv: :desc)
+				beers = beers.order(abv: direction)
 			when 'likes'
-				beers = beers.order(likes_count: :asc)
+				beers = beers.order(likes_count: direction)
 			when 'reviews'
 				beers = beers
 					.left_joins(:reviews)
 					.group('beers.id')
-					.order('COUNT(reviews.id) DESC')
+					.order(Arel.sql("COUNT(reviews.id) #{direction}"))
 			when 'rating'
 				beers = beers
 					.left_joins(:reviews)
 					.group('beers.id')
-					.order('AVG(reviews.rating) DESC NULLS LAST')
+					.order(Arel.sql("AVG(reviews.rating) #{direction} NULLS LAST"))
 			else
 				beers = beers
 		end
