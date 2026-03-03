@@ -12,7 +12,8 @@ class ReviewSerializer < ActiveModel::Serializer
   def beer
     {
       beer_id: self.object.beer.id, 
-      beer_name: self.object.beer.name
+      beer_name: self.object.beer.name,
+      beer_image: self.object.beer.img_url
     }
   end
   

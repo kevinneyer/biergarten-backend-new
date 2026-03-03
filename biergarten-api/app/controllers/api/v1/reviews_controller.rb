@@ -14,6 +14,12 @@ class Api::V1::ReviewsController < ApplicationController
           review = Review.create({content: params[:content], beer_id: params[:beer][:beer_id], rating: params[:rating], user: session_user})
           render json: review     
       end
+
+      def update
+        review = Review.find(params[:id])
+        review.update(review_params)
+        render json: review 
+      end
       
       def destroy
         review = Review.find(params[:id])
