@@ -22,9 +22,13 @@ class Api::V1::UsersController < ApplicationController
     end 
 
     def update
-      user = User.find(params[:id])
-      user = User.update(user_params)
-      render json: user
+      if session_user
+        user = User.find(params[:id])
+        user.update(user_params)
+        render json: user
+      else 
+        render json: { body: "ERROR"}
+      end
     end
  
     private
