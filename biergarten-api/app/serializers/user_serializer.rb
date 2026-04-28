@@ -1,7 +1,8 @@
 class UserSerializer < ActiveModel::Serializer
   attributes :id, :username, :email, :password, :image
-  has_many :favorites
-  has_many :reviews
+  attributes :favorites, :reviews 
+  # has_many :favorites
+  # has_many :reviews
   has_many :followers
   has_many :followeds
   has_many :active_relationships

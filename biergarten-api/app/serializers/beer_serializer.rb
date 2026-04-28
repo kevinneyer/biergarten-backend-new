@@ -1,6 +1,5 @@
 class BeerSerializer < ActiveModel::Serializer
-  attributes :id, :brewery, :name, :style, :abv, :img_url, :description, :tasting_notes, :likes_count, :recommended_drinking, :url
-  has_many :reviews
+  attributes :id, :brewery, :name, :style, :abv, :img_url, :description, :tasting_notes, :likes_count, :recommended_drinking, :url, :reviews
   has_many :favorites
   has_many :likes
 
